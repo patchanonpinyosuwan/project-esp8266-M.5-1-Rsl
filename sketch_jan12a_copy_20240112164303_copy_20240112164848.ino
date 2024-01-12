@@ -5,8 +5,9 @@
 #define PASSWORD    "Jaonai133279"     //ใส่ รหัส Wifi
 #define LINE_TOKEN  "k55b0fsXMEEDLLcyelRQThTJhUsmaMM3Nrup7Wo2pJu"   //ใส่ รหัส TOKEN ที่ได้มาจากข้างบน
 
-int ledPin = D0;
+int ledPin = D0;//ประกาศตัวแปร ให้ LED
 int GAS = A0;//ประกาศตัวแปร ให้ GAS
+int SPEAKER = D8;//ประกาศตัวแปร ให้ Buzzer
 int val = 0;
 void setup() {
   pinMode(ledPin, OUTPUT);  // sets the pin as output
@@ -37,12 +38,22 @@ void loop() {
     delay(500);
     digitalWrite(ledPin,LOW);
     delay(500);
+
+    digitalWrite(SPEAKER,HIGH); // สั่งให้ลำโพงส่งเสียง
+    delay(500);
+    digitalWrite(SPEAKER,LOW);
+    delay(500); 
+
     LINE.notify("มีแก๊ส");
   }
   else{
     digitalWrite(ledPin, LOW); // สั่งให้ LED ดับ
+    digitalWrite(SPEAKER,LOW); // สั่งให้ลำโพง ดับ
     return;
   } 
+  delay(100);
+  return;
+}
   delay(100);
   return;
 }
