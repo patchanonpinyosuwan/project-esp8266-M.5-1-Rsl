@@ -1,6 +1,6 @@
 #include <TridentTD_LineNotify.h>
-#define SSID        "JAONINE_2G"      //ใส่ ชื่อ Wifi ที่จะเชื่อมต่อ
-#define PASSWORD    "KATE133279"     //ใส่ รหัส Wifi
+#define SSID        "xxx"      //ใส่ ชื่อ Wifi ที่จะเชื่อมต่อ
+#define PASSWORD    "xxx"     //ใส่ รหัส Wifi
 #define LINE_TOKEN  "k55b0fsXMEEDLLcyelRQThTJhUsmaMM3Nrup7Wo2pJu"   //ใส่ รหัส TOKEN ที่ได้มาจากข้างบน
 
 int ledPin = D0;//ประกาศตัวแปร ให้ LED
